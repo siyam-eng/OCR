@@ -27,10 +27,9 @@ def decode_barcode(img_path):
     result = decode(img)
     data = []
     for i in result:
-        data.append(i.data.decode('utf-8'))
-        print(i.data.decode('utf-8'))
+        data.append(i.data.decode("utf-8"))
+        print(i.data.decode("utf-8"))
     return data
 
-decode_barcode('output.jpg')
 
-
+decode_barcode("output.jpg")

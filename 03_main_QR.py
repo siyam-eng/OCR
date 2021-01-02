@@ -5,6 +5,7 @@ import time
 
 # making a QR object
 
+
 def encode_QR(text, image):
     img = qrcode.make(text)
 
@@ -16,7 +17,7 @@ def encode_QR(text, image):
     img.thumbnail((qr_code_len, qr_code_len))
     pos = (inp_image.size[0] - img.size[0], inp_image.size[1] - img.size[1])
     inp_image.paste(img, pos)
-    inp_image.save('output.jpg')
+    inp_image.save("output.jpg")
 
 
 def decode_QR(img_path):
@@ -26,8 +27,6 @@ def decode_QR(img_path):
     return retval
 
 
-encode_QR('This is a sample text for QR code', 'input.jpg')
+encode_QR("This is a sample text for QR code", "input.jpg")
 
 # print(decode_QR('output.jpg'))
-
-
