@@ -9,4 +9,5 @@ def decode_barcode(img_path):
         print(i.data.decode("utf-8"))
 
 
-decode_barcode("barcode2.png")
+IMAGE_PATH = "output.jpg"
+decode_barcode(IMAGE_PATH)

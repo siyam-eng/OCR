@@ -3,9 +3,8 @@ from barcode import EAN8
 from barcode.writer import ImageWriter
 from pyzbar.pyzbar import decode
 
-
 NUMBERS = "1114567"
-INPUT_IMG = "logo.jpg"
+INPUT_IMG = "input.jpg"
 OUTPUT_NAME = "output.jpg"
 COLOR = "red-black"  # OPTIONS: 'grey-red', 'yellow', red-black'
 
@@ -77,5 +76,5 @@ def encode_barcode():
             decodable = True
         height += 1
 
-
-encode_barcode()
+if __name__ == "__main__":
+    encode_barcode()

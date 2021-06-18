@@ -41,10 +41,11 @@ def change_color(img_path, option=None):
 
     return img
 
+if __name__ == '__main__':
+    IMAGE_PATH = "image.png"
+    img = change_color(IMAGE_PATH)
+    # img.show()
+    print(img.size)
 
-img = change_color("image.png")
-img.show()
-print(img.size)
-
-text = pytesseract.image_to_string(img)
-print(text.strip())
+    text = pytesseract.image_to_string(img, lang='eng')
+    print(text.strip())
